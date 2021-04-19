@@ -1,0 +1,156 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="scripts/myCSS.css" type="text/css" />
+<script type="text/javascript" src ="scripts/js/jquery-2.1.4.min.js" ></script>
+<script type="text/javascript" src ="scripts/js/jquery.flip.min.js" ></script>
+<!--  -->
+<script type="text/javascript" src ="scripts/russianConfig.js" ></script>
+<script type="text/javascript" src ="scripts/wordList.js" ></script>
+<script type="text/javascript" src ="scripts/russianExamples.js" ></script>
+<script type="text/javascript" src ="scripts/myJS.js" ></script>
+
+<title>Russian Flashcards</title>
+
+</head>
+<body onload ="init()">
+
+<!--top menu-->
+<div class="page-tab">
+	<div class="page-tab-container">
+		<div class="page-tab-logo">
+			<b style="font-size:16px;">Multilingual Flashcards<sup style="font-size: 10px;">10</sup> </b>
+		</div>
+	    <div class="page-tab-all-div">
+	        <div class="page-single-table" id="menu-home-btn">
+	            Home
+	        </div>
+	        <div class="page-single-table" id="menu-features-btn">
+	            Features
+	        </div>
+	        <div class="page-single-table" id="menu-contributors-btn">
+	            Contributors
+	        </div>
+	        <div class="page-single-table" id="menu-contactus-btn">
+	            Contact us
+	        </div>
+	        <div class="page-single-table" id="menu-aboutus-btn">
+	            About us
+	        </div>
+	    </div>
+	</div>
+</div>
+<!--top menu end-->
+<!-- title -->
+<div style="margin:auto; width: 500px; height: 70px;">  
+	<div id ="title" style="background-image: url('./img/Russian_flashcards.png');"></div>
+</div>
+<div style="clear: both;"></div>
+<!-- title end -->
+ 
+
+<div style ="height:400px; width:900px; margin:auto; border:0px solid blue;">
+	
+	<div id = "themes" >
+		<img src="img/theme_title.png"  style="display:block;width:200px;height:30px;margin:auto;" alt="theme"  />
+		<div class = "theme_btn" id="theme_action">Action</div> 
+		<div class = "theme_btn" id="theme_animal">Animal</div>  
+		<div class = "theme_btn" id="theme_body">Body</div> <br style="clear:both;" />
+		<div class = "theme_btn" id="theme_color">Color</div> 
+		<div class = "theme_btn" id="theme_food/drink">Food/Drink</div>  
+		<div class = "theme_btn" id="theme_nature">Nature</div> 	<br style="clear:both;" />
+		<div class = "theme_btn" id="theme_number">Number</div> 
+		<div class = "theme_btn" id="theme_people">People</div>   
+		<div class = "theme_btn" id="theme_place">Place</div> 	<br style="clear:both;" />
+		<div class = "theme_btn" id="theme_property">Property</div> 
+		<div class = "theme_btn" id="theme_location">Location</div>   
+		<div class = "theme_btn" id="theme_study">Study</div> 	<br style="clear:both;" />
+		<div class = "theme_btn" id="theme_things">Things</div> 
+		<div class = "theme_btn" id="theme_time">Time</div>  
+		<div class = "theme_btn" id="theme_transportation">Transportation</div>  <br style="clear:both;" />
+		<br style="clear:both;" />
+		<div class = "category_btn" id="category_adjective" style="margin-left:33px;">Adjective</div>
+		<div class = "category_btn" id="category_noun">Noun</div>
+		<div class = "category_btn" id="category_verb">Verb</div>
+	</div>
+	
+	<div id ="center_display">
+		<img src ="img/lang_change_icon.png" alt="change language" id="language_switch_btn" style ="visibility: hidden;" />
+		<img src ="img/lleft.png" alt ="Left Button" class="lr_button" id ="l_button" title ="previous" onmousedown = "downlbtn(this)" onmouseup = "uplbtn(this)" />
+	
+		<div id ="card_display">
+			<div id ="main" title="Click to Flip" >
+				<div class="front" style="width:353px; height:291px; border:1px solid black;">
+					<img id="flash_card" src="img/airplane.png" />
+					<div id ="card_name" >airplane</div>
+					<img src="img/turnover_symbol.png" alt="click to flip" class="turn_over_prompt_img">
+				</div>
+				<div class="back" style="width:353px; height:291px; border:1px solid black;">
+					<!-- <img id="flash_card_back" src="img/airplane_back.png" /> -->
+					<img src="img/turnover_symbol.png" alt="click to flip" class="turn_over_prompt_img">
+					<div id="flash_card_back_theme">NULL</div>
+					<div id="flash_card_back_category">NULL</div>
+					<br style="clear: both;" />
+					<div id="flash_card_back_word">NULL</div>
+					<div id="flash_card_back_ex1">NULL</div>
+					<!-- <div id="flash_card_back_ex2">NULL</div> -->
+				</div>
+			</div>
+			<audio id="audio" src="audio/airplane.mp3" type ="audo/mpeg" controls />
+		</div>
+		
+		<img src ="img/rright.png" alt ="Right Button" class="lr_button" id ="r_button" title ="next" onmousedown = "downrbtn(this)" onmouseup = "uprbtn(this)" />
+	</div>
+	
+
+	
+</div>
+
+<div style="width: 900px; margin:auto;">
+	
+	<div style ="display:block; height:60px; width:170px;  float:left; margin-left:15px; border: 0px solid red;"><img src="img/list_icon.png" alt="Show Word List" title="Show all the words" id="listIcon" /></div>
+	<div style ="display:block; height:60px; width:170px;  float:left; margin-left:15px; border: 0px solid red;"><img src="img/google-translate-filled-51.png" alt="Sentence Translation" title="Sentence Translation Table" id="sentTransIcon" /></div>
+	<!--
+	<div id="alphabet"  >
+		<img src="img/Hangul_icon.png" alt="Hangul Table" title="Open Hangul Table" id="alphabet_icon" />
+	</div>
+	-->
+
+</div>
+
+
+<div style="clear: both;"></div>
+
+
+<div style ="display:block; height:420px; width:1000px; margin:auto; border:0px solid red;" id="wordArea">
+</div>
+
+<div id ="botDeclare">
+	<img src="./img/bot_line.png" alt ="show " width="1100px" /><br />
+	2016 Language Learning Research Center at Stony Brook University. &nbsp;&nbsp;&nbsp;&nbsp; All Rights Reserved
+</div>
+<!--
+<div id ="botDeclare">
+	<img src="./img/bot_line.png" alt ="show " width="1100px" /><br />
+	<a href="../index.html">HOME</a> | <a href="../features.html">FEATURES</a> | <a href="../contributors.html">CONTRIBUTORS</a> | <a href="http://www.stonybrook.edu/commcms/llrc/" target="_blank"> ABOUT US</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2016 Language Learning Research Center at Stony Brook University. &nbsp;&nbsp;&nbsp;&nbsp; All Rights Reserved
+</div>
+-->
+<!--
+<div id = "table_div">
+	<div style="width: 770px;  margin: auto;
+	  margin-top: 7%; ">
+	  
+	<b style=" color: white; font-size: 45px; cursor: pointer; border:1px solid lightgrey; width: 80px; background-color: rgba(200,200,200,0.5); padding-left: 5px; padding-right: 5px;">X</b> 
+	
+		<div id="alphabet_table">
+		<img src="img/HangulTable.png" alt="Hangul Table" id="table_img" />
+	</div>
+	
+		
+	</div>
+</div>
+-->
+</body>
+</html>

@@ -1,0 +1,121 @@
+*{
+	margin:0px;
+	font-size: 30px;
+}
+#homePageTitle{
+	width: 840px;
+	height: 52px;
+	margin:auto;
+	margin-top: 40px;
+	text-align: center;
+}
+#homePageTitle b{
+	font-size:28px;
+}
+#mainDiv{
+	width: 840px;
+	height: 442px;
+	margin:auto;
+	margin-top: 10px;
+}
+#worldmap{
+	position: relative;
+	left: -35px;
+	top: -15px;
+	background-image: url('./languages/img/worldMap/worldmap.jpg'); 
+	background-repeat: no-repeat;
+	width: 680px;
+	height: 482px; 
+	border: 1px solid #888888;
+	box-shadow: 3px 3px 10px #888888;
+
+}
+#worldMapContainer{
+	width: 630px;
+	height: 432px;
+	overflow: hidden;
+	box-shadow: 3px 3px 10px #888888;
+	float: left;
+}
+.flags{
+	position: absolute;
+	width: 50px; 
+	height: 30px;
+	box-shadow: 1px 1px 10px #000000;
+	cursor: pointer;
+}
+.flags:hover{
+	border: 1px solid #ffffff;
+	box-shadow: 1px 1px 20px #ffffff;
+}
+.flags:active{
+	box-shadow: 1px 1px 10px #000000;
+}
+
+#langList{
+	width: 200px;
+	height: 432px;
+	overflow: hidden;
+	box-shadow: 3px 3px 10px #888888;
+	float: left;
+}
+.langBtns{
+	color: #ffffff;
+	font-size: 28px;
+	width: 150px;
+	height: 33px;
+	box-shadow: 3px 3px 10px #888888;
+	text-align: center;
+	margin-top: 5px;
+	margin-left: 25px;
+	background-color: rgb(46,46,46);
+	cursor: pointer;
+	border: 2px solid;
+    border-radius: 25px;
+}
+.langBtns:hover{
+	margin-left: 28px;
+	box-shadow: 1px 1px 20px #ffffff;
+	background-color: rgb(102,103,86);
+}
+.langBtns:active{
+	background-color: rgb(46,46,46);
+}
+#botDeclare{
+	font-size: 12px;
+	width:1100px;
+	height:60px;
+	text-align: center;
+	margin: auto;
+	margin-top: 60px;
+}
+a{
+	font-size: 12px;
+}
+.page-tab{
+    width:100%;
+    height: 40px;
+    border:1px solid lightgrey;
+    background-color:white;
+    margin:auto;
+}
+.page-tab-all-div{
+    width:850px;
+    height: 40px;
+    margin:auto;
+}
+.page-single-table{
+    font-size:15px;
+    width:150px;
+    height: 40px;
+    line-height:40px;
+    text-align: center;
+    color:grey;
+    margin-left: 15px;
+    cursor:pointer;
+    float:left;
+}
+.page-single-table:hover{
+    background-color:dimgray;
+    color:white;
+}

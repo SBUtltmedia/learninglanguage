@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LLRC Flashcards</title>
+
+	<link rel="stylesheet" href="./homeStyleSheet.css" type="text/css" />
+	<script type="text/javascript" src ="./languages/scripts/js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src ="./homeJS.js" ></script>
+</head>
+<body>
+
+<!--top menu-->
+<div class="page-tab">
+    <div class="page-tab-all-div">
+        <div class="page-single-table" id="menu-home-btn">
+            Home
+        </div>
+        <div class="page-single-table" id="menu-features-btn">
+            Features
+        </div>
+        <div class="page-single-table" id="menu-contributors-btn">
+            Contributors
+        </div>
+        <div class="page-single-table" id="menu-contactus-btn">
+            Contact us
+        </div>
+        <div class="page-single-table" id="menu-aboutus-btn">
+            About us
+        </div>
+    </div>
+</div>
+<!--top menu end-->
+
+<div  id="homePageTitle"><b>Multilingual Flashcards<sup style="font-size: 20px;">10</sup> </b></div>
+<!--<div id="homePageTitle"><b>Map</b></div>-->
+
+<div id="mainDiv">
+	<div id="langList">
+		<div class="langBtns" 
+		onmouseover="cLangBtn('arabic')" 
+		onmouseout="oLangBtn('arabic')"
+		onclick="window.location.href='./languages/arabic.html'">Arabic</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('chinese')" 
+		onmouseout="oLangBtn('chinese')"
+		onclick="window.location.href='./languages/chinese.html'">Chinese</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('french')" 
+		onmouseout="oLangBtn('french')"
+		onclick="window.location.href='./languages/french.html'">French</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('german')" 
+		onmouseout="oLangBtn('german')"
+		onclick="window.location.href='./languages/german.html'">German</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('hindi')" 
+		onmouseout="oLangBtn('hindi')"
+		onclick="window.location.href='./languages/hindi.html'">Hindi</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('italian')" 
+		onmouseout="oLangBtn('italian')"
+		onclick="window.location.href='./languages/italian.html'">Italian</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('japanese')" 
+		onmouseout="oLangBtn('japanese')"
+		onclick="window.location.href='./languages/japanese.html'">Japanese</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('korean')" 
+		onmouseout="oLangBtn('korean')"
+		onclick="window.location.href='./languages/korean.html'">Korean</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('russian')" 
+		onmouseout="oLangBtn('russian')"
+		onclick="window.location.href='./languages/russian.html'">Russian</div>
+		<div class="langBtns"
+		onmouseover="cLangBtn('spanish')" 
+		onmouseout="oLangBtn('spanish')"
+		onclick="window.location.href='./languages/spanish.html'">Spanish</div>
+		<br />
+	</div>
+
+	<div id ="worldMapContainer" onmousemove="shift(event,this)">
+		<div id="worldmap" >
+			
+			<img id="arabicFlag" class = "flags" src="./languages/img/flags/arabic.png"
+			 style="left:360px; top:270px; " alt="arabic" title="Arabic"
+			 onclick="window.location.href='./languages/arabic.html'" />
+			
+			<img id="chineseFlag" class = "flags" src="./languages/img/flags/chinese.png"
+			 style="left:543px; top:225px; " alt="chinese" title="Chinese"
+			 onclick="window.location.href='./languages/chinese.html'"/>
+			
+			<img id="frenchFlag" class = "flags" src="./languages/img/flags/french.jpg"
+			 style="left:210px; top:137px; " alt="french" title="French"
+			 onclick="window.location.href='./languages/french.html'"/>
+			
+			<img id="germanFlag" class = "flags" src="./languages/img/flags/german.png"
+			 style="left:277px; top:94px;  " alt="german" title="german"
+			 onclick="window.location.href='./languages/german.html'"/>
+
+			<img id="hindiFlag" class = "flags" src="./languages/img/flags/hindi.jpg"
+			 style="left:423px; top:294px; " alt="hindi" title="Hindi"
+			 onclick="window.location.href='./languages/hindi.html'"/>
+			
+			<img id="italianFlag" class = "flags" src="./languages/img/flags/italian.jpg"
+			 style="left:273px; top:220px;" alt="italian" title="Italian
+			 " onclick="window.location.href='./languages/italian.html'"/>
+			
+			<img id="koreanFlag" class = "flags" src="./languages/img/flags/korean.jpg"
+			 style="left:585px; top:125px; " alt="korean" title="Korean"
+			 onclick="window.location.href='./languages/korean.html'"/>
+			
+			<img id="japaneseFlag" class = "flags" src="./languages/img/flags/japanese.jpg"
+			 style="left:583px; top:182px; " alt="japanese" title="Japanese"
+			 onclick="window.location.href='./languages/japanese.html'"/>
+			
+			<img id="russianFlag" class = "flags" src="./languages/img/flags/russian.png"
+			 style="left:357px; top:75px; "  alt="russian" title="Russian"
+			 onclick="window.location.href='./languages/russian.html'"/>
+			
+			<img id="spanishFlag" class = "flags" src="./languages/img/flags/spanish.png"
+			 style="left:190px; top:190px; " alt="spanish" title="Spanish"
+			 onclick="window.location.href='./languages/spanish.html'"/>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
+</div>
+
+<div id ="botDeclare">
+	<img src="./languages/img/bot_line.png" alt ="show " width="1100px" />
+	 2016 Language Learning Research Center at Stony Brook University. &nbsp;&nbsp;&nbsp;&nbsp; All Rights Reserved
+</div>
+
+</body>
+</html>
